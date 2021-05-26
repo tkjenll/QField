@@ -12,7 +12,6 @@ vcpkg_from_github(
     PATCHES
         # Make qgis support python's debug library
         qgspython.patch
-        geos.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
@@ -77,6 +76,12 @@ if("3d" IN_LIST FEATURES)
     list(APPEND QGIS_OPTIONS -DWITH_3D:BOOL=ON)
 else()
     list(APPEND QGIS_OPTIONS -DWITH_3D:BOOL=OFF)
+endif()
+
+if("quick" IN_LIST FEATURES)
+    list(APPEND QGIS_OPTIONS -DWITH_QUICK:BOOL=ON)
+else()
+    list(APPEND QGIS_OPTIONS -DWITH_QUICK:BOOL=OFF)
 endif()
 
 # Configure debug and release library paths
