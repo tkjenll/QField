@@ -12,6 +12,7 @@ vcpkg_from_github(
     PATCHES
         # Make qgis support python's debug library
         qgspython.patch
+	geos.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
