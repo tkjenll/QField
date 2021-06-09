@@ -246,7 +246,7 @@ void QFieldCloudConnection::login()
 
     if ( resp.isEmpty() )
     {
-      emit loginFailed( tr( "Login temporary unavailable" ) );
+      emit loginFailed( tr( "Login temporarily unavailable" ) );
       setStatus( ConnectionStatus::Disconnected );
       return;
     }
