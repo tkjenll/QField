@@ -756,6 +756,14 @@ ApplicationWindow {
       id: mag
       active: true
       returnGeoValues: false
+
+      property x: undefined
+      property y: undefined
+
+      onReadingChanged: {
+        mag.x = reading.x
+        mag.y = reading.y
+      }
     }
     source: Theme.getThemeVectorIcon( 'north_arrow' )
     x: (root.width - width)/2
