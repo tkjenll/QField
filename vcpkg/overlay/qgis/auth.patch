@@ -1,0 +1,95 @@
+From f6a88499a82fb57957b8bca86cb6c12eac68bab9 Mon Sep 17 00:00:00 2001
+From: Matthias Kuhn <matthias@opengis.ch>
+Date: Sat, 24 Jul 2021 15:23:06 +0200
+Subject: [PATCH] static auth
+
+---
+ src/auth/basic/CMakeLists.txt     | 2 +-
+ src/auth/esritoken/CMakeLists.txt | 2 +-
+ src/auth/identcert/CMakeLists.txt | 2 +-
+ src/auth/oauth2/CMakeLists.txt    | 2 +-
+ src/auth/pkipaths/CMakeLists.txt  | 2 +-
+ src/auth/pkipkcs12/CMakeLists.txt | 2 +-
+ 6 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/src/auth/basic/CMakeLists.txt b/src/auth/basic/CMakeLists.txt
+index f70dfd8c5a..46b9e0e83b 100644
+--- a/src/auth/basic/CMakeLists.txt
++++ b/src/auth/basic/CMakeLists.txt
+@@ -52,7 +52,7 @@ if (FORCE_STATIC_LIBS)
+   install (TARGETS authmethod_basic_a ARCHIVE DESTINATION ${QGIS_PLUGIN_DIR})
+ else()
+   # dynamically loaded module
+-  add_library(authmethod_basic MODULE ${AUTH_BASIC_SRCS} ${AUTH_BASIC_HDRS} ${AUTH_BASIC_UIS_H})
++  add_library(authmethod_basic ${AUTH_BASIC_SRCS} ${AUTH_BASIC_HDRS} ${AUTH_BASIC_UIS_H})
+ 
+   # require c++17
+   target_compile_features(authmethod_basic PRIVATE cxx_std_17)
+diff --git a/src/auth/esritoken/CMakeLists.txt b/src/auth/esritoken/CMakeLists.txt
+index f21dbad982..4639c25706 100644
+--- a/src/auth/esritoken/CMakeLists.txt
++++ b/src/auth/esritoken/CMakeLists.txt
+@@ -49,7 +49,7 @@ if (FORCE_STATIC_LIBS)
+   install (TARGETS authmethod_esritoken_a ARCHIVE DESTINATION ${QGIS_PLUGIN_DIR})
+ else()
+   # dynamically loaded module
+-  add_library(authmethod_esritoken MODULE ${AUTH_ESRITOKEN_SRCS} ${AUTH_ESRITOKEN_HDRS} ${AUTH_ESRITOKEN_UIS_H})
++  add_library(authmethod_esritoken ${AUTH_ESRITOKEN_SRCS} ${AUTH_ESRITOKEN_HDRS} ${AUTH_ESRITOKEN_UIS_H})
+ 
+   # require c++17
+   target_compile_features(authmethod_esritoken PRIVATE cxx_std_17)
+diff --git a/src/auth/identcert/CMakeLists.txt b/src/auth/identcert/CMakeLists.txt
+index 99ab05db60..8f1eec1df2 100644
+--- a/src/auth/identcert/CMakeLists.txt
++++ b/src/auth/identcert/CMakeLists.txt
+@@ -51,7 +51,7 @@ if (FORCE_STATIC_LIBS)
+   install (TARGETS authmethod_identcert_a ARCHIVE DESTINATION ${QGIS_PLUGIN_DIR})
+ else()
+   # dynamically loaded module
+-  add_library(authmethod_identcert MODULE ${AUTH_IDENTCERT_SRCS} ${AUTH_IDENTCERT_HDRS} ${AUTH_IDENTCERT_UIS_H})
++  add_library(authmethod_identcert ${AUTH_IDENTCERT_SRCS} ${AUTH_IDENTCERT_HDRS} ${AUTH_IDENTCERT_UIS_H})
+ 
+   # require c++17
+   target_compile_features(authmethod_identcert PRIVATE cxx_std_17)
+diff --git a/src/auth/oauth2/CMakeLists.txt b/src/auth/oauth2/CMakeLists.txt
+index 11de36d271..707707f9a0 100644
+--- a/src/auth/oauth2/CMakeLists.txt
++++ b/src/auth/oauth2/CMakeLists.txt
+@@ -136,7 +136,7 @@ if (FORCE_STATIC_LIBS)
+   install (TARGETS authmethod_oauth2_a ARCHIVE DESTINATION ${QGIS_PLUGIN_DIR})
+ else()
+   # dynamically loaded module
+-  add_library(authmethod_oauth2 MODULE ${AUTH_OAUTH2_SRCS} ${AUTH_OAUTH2_HDRS} ${AUTH_OAUTH2_UIS_H})
++  add_library(authmethod_oauth2 ${AUTH_OAUTH2_SRCS} ${AUTH_OAUTH2_HDRS} ${AUTH_OAUTH2_UIS_H})
+ 
+   target_include_directories(authmethod_oauth2 PRIVATE
+     ${CMAKE_SOURCE_DIR}/external/qjsonwrapper
+diff --git a/src/auth/pkipaths/CMakeLists.txt b/src/auth/pkipaths/CMakeLists.txt
+index fa1cdbc743..3ecd1da539 100644
+--- a/src/auth/pkipaths/CMakeLists.txt
++++ b/src/auth/pkipaths/CMakeLists.txt
+@@ -50,7 +50,7 @@ if (FORCE_STATIC_LIBS)
+   install (TARGETS authmethod_pkipaths_a ARCHIVE DESTINATION ${QGIS_PLUGIN_DIR})
+ else()
+   # dynamically loaded module
+-  add_library(authmethod_pkipaths MODULE ${AUTH_PKIPATHS_SRCS} ${AUTH_PKIPATHS_HDRS} ${AUTH_PKIPATHS_UIS_H})
++  add_library(authmethod_pkipaths ${AUTH_PKIPATHS_SRCS} ${AUTH_PKIPATHS_HDRS} ${AUTH_PKIPATHS_UIS_H})
+ 
+   # require c++17
+   target_compile_features(authmethod_pkipaths PRIVATE cxx_std_17)
+diff --git a/src/auth/pkipkcs12/CMakeLists.txt b/src/auth/pkipkcs12/CMakeLists.txt
+index dd4a4ac60b..b4f7324e3c 100644
+--- a/src/auth/pkipkcs12/CMakeLists.txt
++++ b/src/auth/pkipkcs12/CMakeLists.txt
+@@ -50,7 +50,7 @@ if (FORCE_STATIC_LIBS)
+   install (TARGETS authmethod_pkcs12_a ARCHIVE DESTINATION ${QGIS_PLUGIN_DIR})
+ else()
+   # dynamically loaded module
+-  add_library(authmethod_pkcs12 MODULE ${AUTH_PKCS12_SRCS} ${AUTH_PKCS12_HDRS} ${AUTH_PKCS12_UIS_H})
++  add_library(authmethod_pkcs12 ${AUTH_PKCS12_SRCS} ${AUTH_PKCS12_HDRS} ${AUTH_PKCS12_UIS_H})
+ 
+   # require c++17
+   target_compile_features(authmethod_pkcs12 PRIVATE cxx_std_17)
+-- 
+2.31.1
+
