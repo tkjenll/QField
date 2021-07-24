@@ -187,6 +187,7 @@ jobs:
           #          echo "CMAKE_EXTRA_CXX_STANDARD_LIBRARIES=-lldap" >> $GITHUB_ENV
           [[ "${{ matrix.triplet }}" == "arm64-ios" ]] && echo "CMAKE_EXTRA_CXX_STANDARD_LIBRARIES=/Users/runner/builddir/vcpkg_installed/arm64-ios/lib/qca.a /Users/runner/builddir/vcpkg_installed/arm64-ios/lib/libpq.a /Users/runner/builddir/vcpkg_installed/arm64-ios/lib/libpgport.a /Users/runner/builddir/vcpkg_installed/arm64-ios/lib/libpgcommon.a /Applications/Xcode_12.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/lib/libiconv.tbd" >> $GITHUB_ENV
           echo "EXTRA_CMAKE_ARGS=-GXcode -DUSE_MAC_BUNDLING=OFF -DDEPLOYMENT_TARGET=12.0 -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$(pwd)/ios.toolchain.cmake -DPLATFORM=OS64COMBINED -DENABLE_BITCODE=FALSE" >> $GITHUB_ENV
+          wget https://raw.githubusercontent.com/OlivierLDff/IosCMakeToolchain/master/ios.toolchain.cmake
 
           sudo xcode-select -s /Applications/Xcode_12.app/Contents/Developer
 
@@ -216,7 +217,6 @@ jobs:
 
           overlay_ports=(${WORKSPACE}/${{ matrix.overlay }} ${WORKSPACE}/vcpkg/overlay)
           echo "Building with $(IFS=\; ; echo "${overlay_ports[*]}")"
-          wget https://raw.githubusercontent.com/OlivierLDff/IosCMakeToolchain/master/ios.toolchain.cmake
           cmake -S "${SOURCE_DIR}" \
                 -B "${CMAKE_BUILD_DIR}" \
                 -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} \
