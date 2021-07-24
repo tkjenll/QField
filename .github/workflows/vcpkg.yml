@@ -186,6 +186,8 @@ jobs:
           # Only macos (?), not ios
           #          echo "CMAKE_EXTRA_CXX_STANDARD_LIBRARIES=-lldap" >> $GITHUB_ENV
           [[ "${{ matrix.triplet }}" == "arm64-ios" ]] && echo "CMAKE_EXTRA_CXX_STANDARD_LIBRARIES=/Users/runner/builddir/vcpkg_installed/arm64-ios/lib/qca.a /Users/runner/builddir/vcpkg_installed/arm64-ios/lib/libpq.a /Users/runner/builddir/vcpkg_installed/arm64-ios/lib/libpgport.a /Users/runner/builddir/vcpkg_installed/arm64-ios/lib/libpgcommon.a /Applications/Xcode_12.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/lib/libiconv.tbd" >> $GITHUB_ENV
+          echo "EXTRA_CMAKE_ARGS=-GXcode -DUSE_MAC_BUNDLING=OFF -DDEPLOYMENT_TARGET=12.0 -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$(pwd)/ios.toolchain.cmake -DPLATFORM=OS64COMBINED -DENABLE_BITCODE=FALSE" >> $GITHUB_ENV
+
           sudo xcode-select -s /Applications/Xcode_12.app/Contents/Developer
 
       - uses: Apple-Actions/import-codesign-certs@v1
@@ -215,25 +217,14 @@ jobs:
           overlay_ports=(${WORKSPACE}/${{ matrix.overlay }} ${WORKSPACE}/vcpkg/overlay)
           echo "Building with $(IFS=\; ; echo "${overlay_ports[*]}")"
           wget https://raw.githubusercontent.com/OlivierLDff/IosCMakeToolchain/master/ios.toolchain.cmake
-          cmake -S "${SOURCE_DIR}" -B "${CMAKE_BUILD_DIR}" -GXcode -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} -DCMAKE_TOOLCHAIN_FILE="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" -DVCPKG_OVERLAY_PORTS=$(IFS=\; ; echo "${overlay_ports[*]}") -DVCPKG_TARGET_TRIPLET="${{ matrix.triplet }}" -DWITH_VCPKG=ON -DUSE_MAC_BUNDLING=OFF -DDEPLOYMENT_TARGET=12.0 \
-            -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$(pwd)/ios.toolchain.cmake \
-            -DPLATFORM=OS64COMBINED \
-            -DENABLE_BITCODE=FALSE 
-
-      - name: Build take 2
-        if: failure()
-        run: |
-          wget https://raw.githubusercontent.com/OlivierLDff/IosCMakeToolchain/master/ios.toolchain.cmake
-          cmake -DCMAKE_PREFIX_PATH=${CMAKE_BUILD_DIR}/vcpkg_installed/${{ matrix.triplet }} \
-            -DDEPLOYMENT_TARGET=12.0 \
-            -DCMAKE_TOOLCHAIN_FILE=$(pwd)/ios.toolchain.cmake \
-            -DPLATFORM=OS64COMBINED \
-            -DENABLE_BITCODE=FALSE \
-            -G "Xcode" \
-            -S . \
-            -B build
-          cmake --build build
-
+          cmake -S "${SOURCE_DIR}" \
+                -B "${CMAKE_BUILD_DIR}" \
+                -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} \
+                -DCMAKE_TOOLCHAIN_FILE="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" \
+                -DVCPKG_OVERLAY_PORTS=$(IFS=\; ; echo "${overlay_ports[*]}") \
+                -DVCPKG_TARGET_TRIPLET="${{ matrix.triplet }}" \
+                -DWITH_VCPKG=ON \
+                ${EXTRA_CMAKE_ARGS}
 
       - name: Upload Build Logs
         uses: actions/upload-artifact@v2
