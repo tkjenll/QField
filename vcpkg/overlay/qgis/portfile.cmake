@@ -14,7 +14,6 @@ vcpkg_from_github(
         qgspython.patch
 	geos.patch
 	gdal.patch
-	auth.patch
 	native_static.patch
 )
 
