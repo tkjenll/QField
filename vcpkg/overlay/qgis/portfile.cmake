@@ -12,9 +12,11 @@ vcpkg_from_github(
     PATCHES
         # Make qgis support python's debug library
         qgspython.patch
-	geos.patch
-	gdal.patch
 )
+
+file(REMOVE ${SOURCE_PATH}/cmake/FindQtKeychain.cmake)
+file(REMOVE ${SOURCE_PATH}/cmake/FindGDAL.cmake)
+file(REMOVE ${SOURCE_PATH}/cmake/FindGEOS.cmake)
 
 vcpkg_find_acquire_program(FLEX)
 vcpkg_find_acquire_program(BISON)
