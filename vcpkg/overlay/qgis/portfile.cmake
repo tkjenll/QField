@@ -14,7 +14,6 @@ vcpkg_from_github(
         qgspython.patch
 	geos.patch
 	gdal.patch
-	native_static.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
