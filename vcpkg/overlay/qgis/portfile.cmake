@@ -14,6 +14,7 @@ vcpkg_from_github(
         qgspython.patch
         gdal.patch
         keychain.patch
+        libxml2.patch
 )
 
 file(REMOVE ${SOURCE_PATH}/cmake/FindQtKeychain.cmake)
