@@ -12,6 +12,7 @@ vcpkg_from_github(
     PATCHES
         # Make qgis support python's debug library
         qgspython.patch
+        gdal.patch
         keychain.patch
 )
 
