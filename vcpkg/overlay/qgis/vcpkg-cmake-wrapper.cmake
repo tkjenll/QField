@@ -2,11 +2,11 @@ include(SelectLibraryConfigurations)
 
 find_path(QGIS_INCLUDE_DIR
     NAMES qgis.h
-    PATHS "${CMAKE_CURRENT_LIST_DIR}/../../include"
+    PATHS "${CMAKE_CURRENT_LIST_DIR}/../../include/qgis"
     NO_DEFAULT_PATH
 )
 find_library(QGIS_LIBRARY_DEBUG
-    NAMES qgis_core_d qgis
+    NAMES qgis_core
     NAMES_PER_DIR
     PATHS "${CMAKE_CURRENT_LIST_DIR}/../../debug/lib"
     NO_DEFAULT_PATH
@@ -66,7 +66,7 @@ function(_qgis_add_dependency target package)
     endif()
 endfunction()
 if(QGIS_FOUND)
-    _qgis_add_dependency(GDAL gdal CONFIG)
+#    _qgis_add_dependency(GDAL gdal CONFIG)
     list(FIND ARGS "REQUIRED" required)
     if(NOT QGIS_FOUND AND NOT required EQUAL "-1")
       message(FATAL_ERROR "Failed to find dependencies of QGIS")
