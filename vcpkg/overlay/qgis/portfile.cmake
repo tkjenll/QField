@@ -76,7 +76,6 @@ if("server" IN_LIST FEATURES)
     endif()
 else()
     list(APPEND QGIS_OPTIONS -DWITH_SERVER:BOOL=OFF)
-    list(APPEND QGIS_OPTIONS -DWITH_SERVER_PLUGINS:BOOL=OFF)
 endif()
 
 if("process" IN_LIST FEATURES)
@@ -340,4 +339,3 @@ file(REMOVE_RECURSE # Added for debug porpose
 
 # Handle copyright
 file(INSTALL ${SOURCE_PATH}/COPYING DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
-configure_file("${CMAKE_CURRENT_LIST_DIR}/vcpkg-cmake-wrapper.cmake" "${CURRENT_PACKAGES_DIR}/share/${PORT}/vcpkg-cmake-wrapper.cmake" @ONLY)
