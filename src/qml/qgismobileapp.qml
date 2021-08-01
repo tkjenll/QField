@@ -757,8 +757,8 @@ ApplicationWindow {
       active: true
       returnGeoValues: true
 
-      property int x: undefined
-      property int y: undefined
+      property real x: undefined
+      property real y: undefined
 
       onReadingChanged: {
         mag.x = reading.x
