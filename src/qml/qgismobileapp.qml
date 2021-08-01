@@ -765,6 +765,12 @@ ApplicationWindow {
         mag.y = reading.y
       }
     }
+
+    Timer {
+      interval: 500; running: true; repeat: true
+      onTriggered: displayToast(mag.x)
+    }
+
     source: Theme.getThemeVectorIcon( 'north_arrow' )
     x: (root.width - width)/2
     y: (root.height - height)/2
