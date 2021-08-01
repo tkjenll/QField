@@ -755,7 +755,7 @@ ApplicationWindow {
     Magnetometer {
       id: mag
       active: true
-      returnGeoValues: false
+      returnGeoValues: true
 
       property int x: undefined
       property int y: undefined
@@ -763,6 +763,10 @@ ApplicationWindow {
       onReadingChanged: {
         mag.x = reading.x
         mag.y = reading.y
+      }
+
+      Component.onCompleted: {
+        start()
       }
     }
 
