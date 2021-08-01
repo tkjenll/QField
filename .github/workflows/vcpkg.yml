@@ -248,10 +248,10 @@ jobs:
 
       - name: Build
         run: |
-          cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target qfield
+          cmake --build "${{ env.CMAKE_BUILD_DIR }}" # --target qfield
 
       - name: Setup tmate session
-        if: failure()
+        if: always()
         uses: mxschmitt/action-tmate@v3
         with:
           limit-access-to-actor: true
