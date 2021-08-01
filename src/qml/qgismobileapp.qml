@@ -772,7 +772,7 @@ ApplicationWindow {
 
     Timer {
       interval: 500; running: true; repeat: true
-      onTriggered: displayToast(mag.x)
+      onTriggered: displayToast('X:' + mag.reading.x + ' Y:' + mag.reading.y + ' Z:' + mag.reading.z + ' X1:' + mag.x + ' Y1:' + mag.y)
     }
 
     source: Theme.getThemeVectorIcon( 'north_arrow' )
