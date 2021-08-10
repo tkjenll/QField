@@ -13,7 +13,6 @@ set (APP_PACKAGE_NAME "qfield" CACHE STRING "Package name suffix. E.g. qfield --
 string(REGEX REPLACE "v" "" CLEAN_APP_VERSION "${APP_VERSION}")
 
 project(${APP_NAME}
-  LANGUAGES CXX
   VERSION ${CLEAN_APP_VERSION}
 )
 

@@ -1,7 +1,7 @@
 vcpkg_check_linkage(ONLY_DYNAMIC_LIBRARY)
 
-set(QGIS_REF decaadbb31871ed22b18b7a35015d90ca3e77f37)
-set(QGIS_SHA512 59d2500a031248487bae9b1f37f2e8ce9dd6fecdce8dd0f022ef1a62659c0664b360af4680a36ebeaaf743369f492b268c6ec2a93cb34697ff205640c9e577cc)
+set(QGIS_REF 9f4652942e9d131c081de821767ae22d25b7ec02)
+set(QGIS_SHA512 4a7649d7e00a7127ac629e746de0bf9250684ec25e5cebcc6403a8cc0ca9a1127208708293e3220fe2e4abfdb736c1dd105f7bfc287eef0ce7e632d910898fb9)
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
@@ -114,10 +114,8 @@ macro(FIND_LIB_OPTIONS basename relname debname suffix libsuffix)
 endmacro()
 
 
-if (VCPKG_LIBRARY_LINKAGE STREQUAL static)
     list(APPEND QGIS_OPTIONS -DFORCE_STATIC_LIBS=TRUE)
     list(APPEND QGIS_OPTIONS -DFORCE_STATIC_PROVIDERS=TRUE)
-endif()
 
 if(VCPKG_TARGET_IS_WINDOWS)
     ##############################################################################
@@ -340,5 +338,6 @@ file(REMOVE_RECURSE # Added for debug porpose
     ${CURRENT_PACKAGES_DIR}/debug/share
 )
 
+file(INSTALL ${CMAKE_CURRENT_LIST_DIR}/QGISConfig.cmake DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT})
 # Handle copyright
 file(INSTALL ${SOURCE_PATH}/COPYING DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)

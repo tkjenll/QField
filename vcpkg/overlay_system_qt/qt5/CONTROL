@@ -8,7 +8,7 @@ Feature: essentials
 Description: Build the essential qt modules
 
 Feature: latest
-Description: Build latest qt version (5.15.2)
+Description: Build latest qt version (5.15.2) # Not available
 
 Feature: all
 Description: Install all Qt5 submodules (Warning: Could take a long time and fail...)

@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - release-**
+      - vcpkg-osx
   pull_request:
   release:
     types: ['published', 'released']
@@ -37,6 +38,13 @@ jobs:
             qt_arch: ''
             pathconvert: 'echo'
 
+          - os: 'macos-10.15'
+            triplet: 'x64-osx'
+            # To run `nuget.exe` on non-Windows platforms, we must use `mono`.
+            mono: 'mono'
+            build-type: 'Release'
+            vcpkg-root: '/Users/runner'
+            pathconvert: 'echo'
     env:
       TX_TOKEN: ${{ secrets.TX_TOKEN }}
       VCPKG_BINARY_SOURCES: 'clear;nuget,GitHub,readwrite'
@@ -81,7 +89,7 @@ jobs:
           path: |
             ${{ env.VCPKG_ROOT }}/vcpkg
             ${{ env.VCPKG_ROOT }}/vcpkg.exe
-          key: ${{ runner.os }}-${{ hashFiles('.git/modules/vcpkg/HEAD') }}-x
+          key: ${{ runner.os }}-${{ hashFiles('.git/modules/vcpkg/HEAD') }}
 
       - name: Bootstrap vcpkg
         if: steps.cache-vcpkg-tool.outputs.cache-hit != 'true'
@@ -94,7 +102,7 @@ jobs:
             ./bootstrap-vcpkg.sh
           fi
 
-      - name: Setup NuGet Credentials
+      - name: Setup NuGet credentials
         shell: bash
         run: |
           ${{ env.VCPKG_ROOT }}/vcpkg fetch nuget
@@ -128,14 +136,24 @@ jobs:
           sudo apt clean
           df -h
 
+      - name: Prepare install Qt
+        if: ${{ matrix.install_qt }}
+        run: |
+          echo "QT_VERSION=$(grep Version vcpkg/overlay_system_qt/qt5/CONTROL | cut -f2 -d ' ')" >> $GITHUB_ENV
+
       - name: Install Qt
         if: ${{ matrix.install_qt }}
         uses: jurplel/install-qt-action@v2
         with:
-          version: 5.15.2
+          version: ${{ env.QT_VERSION }}
           modules: 'qtcharts'
           target: ${{ matrix.qt_target }}
           arch: ${{ matrix.qt_arch }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
 
       - name: Prepare linux build env
         if: ${{ matrix.triplet == 'x64-linux' }}
@@ -143,10 +161,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gperf autopoint '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
           sudo apt-get remove -y libopenexr-dev # Avoid gdal picking this system lib up
-          # echo "CMAKE_EXTRA_CXX_STANDARD_LIBRARIES=${Qt5_DIR}/lib/libQt5DBus.so /home/runner/builddir/vcpkg_installed/x64-linux/lib/libpgcommon.a /home/runner/builddir/vcpkg_installed/x64-linux/lib/libpgport.a /home/runner/builddir/vcpkg_installed/x64-linux/lib/libwebp.a" >> $GITHUB_ENV
           # Required to run unit tests on linux
           echo "QT_QPA_PLATFORM=offscreen" >> $GITHUB_ENV
           echo "TESTWRAPPER=xvfb-run" >> $GITHUB_ENV
+
+      - name: Prepare osx build env
+        if: ${{ matrix.os == 'macos-10.15' }}
+        run: |
+          brew install automake bison flex
+          echo $(brew --prefix bison)/bin >> $GITHUB_PATH
+          echo $(brew --prefix flex)/bin >> $GITHUB_PATH
+          echo "EXTRA_CMAKE_ARGS=-GXcode -DUSE_MAC_BUNDLING=OFF" >> $GITHUB_ENV
+          sudo xcode-select -s /Applications/Xcode_12.app/Contents/Developer
 
       - name: Install dependencies and generate project files
         shell: bash
@@ -158,6 +184,7 @@ jobs:
           VCPKG_ROOT=$( ${{ matrix.pathconvert }} "${VCPKG_ROOT}" )
           SOURCE_DIR=$( ${{ matrix.pathconvert }} "${WORKSPACE}" )
 
+          rm cmake/FindQGIS.cmake
           overlay_ports=(${WORKSPACE}/${{ matrix.overlay }} ${WORKSPACE}/vcpkg/overlay)
           echo "Building with $(IFS=\; ; echo "${overlay_ports[*]}")"
           cmake -S "${SOURCE_DIR}" \
@@ -170,20 +197,20 @@ jobs:
                 -DWITH_SPIX=ON \
                 ${EXTRA_CMAKE_ARGS}
 
-      - name: Upload Build Logs
+      - name: Upload build logs
         uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: build-logs-${{ matrix.triplet }}
           path: ${{ env.VCPKG_ROOT }}/buildtrees/**/*.log
 
-      - name: 🌍 Pull Translations
+      - name: 🌍 Pull translations
         shell: bash
         run: |
           if [[ -z "${TX_TOKEN}" ]]; then
             echo "TX_TOKEN not set, skip tx pull"
           else
-            pip install transifex-client
+            pip3 install transifex-client
             pushd "${{ env.VCPKG_ROOT }}"
             ./vcpkg integrate install
             popd
@@ -202,7 +229,7 @@ jobs:
           SOURCE_DIR=$( ${{ matrix.pathconvert }} "${WORKSPACE}" )
           pip install -r "${SOURCE_DIR}/test/spix/requirements.txt"
           cd "${{ env.CMAKE_BUILD_DIR }}"
-          ${TESTWRAPPER} ctest --output-on-failure -E '${{ matrix.exclude-tests }}' -C ${{ matrix.build-type }}
+          ${TESTWRAPPER} ctest -V -E '${{ matrix.exclude-tests }}' -C ${{ matrix.build-type }}
 
       - uses: actions/upload-artifact@v2
         with:
@@ -213,3 +240,10 @@ jobs:
         with:
           name: "test-report-${{ matrix.triplet }}-${{ matrix.build-type }}"
           path: "${{ env.CMAKE_BUILD_DIR }}/report"
+
+      - name: Setup tmate session
+        if: failure()
+        uses: mxschmitt/action-tmate@v3
+        with:
+          limit-access-to-actor: true
+
