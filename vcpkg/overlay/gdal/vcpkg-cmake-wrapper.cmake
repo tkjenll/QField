@@ -23,9 +23,16 @@ if(NOT GDAL_INCLUDE_DIR OR NOT GDAL_LIBRARY)
     message(FATAL_ERROR "Installation of vcpkg port gdal is broken.")
 endif()
 
-set(FindGDAL_SKIP_GDAL_CONFIG TRUE)
-
-_find_package(${ARGS})
+add_library(GDAL::GDAL STATIC IMPORTED)
+set_target_properties(GDAL::GDAL PROPERTIES
+                      IMPORTED_CONFIGURATIONS "RELEASE;DEBUG"
+                      IMPORTED_LOCATION_RELEASE "${GDAL_LIBRARY_RELEASE}"
+                      IMPORTED_LOCATION_DEBUG "${GDAL_LIBRARY_DEBUG}"
+                      INTERFACE_INCLUDE_DIRECTORIES "${GDAL_INCLUDE_DIR}"
+                      )
+set(GDAL_FOUND 1)
+set(GDAL_LIBRARY GDAL::GDAL)
+set(GDAL_INCLUDE_DIR ${INCLUDE_DIR})
 
 set(_gdal_dep_find_args "")
 if(";${ARGS};" MATCHES ";REQUIRED;")

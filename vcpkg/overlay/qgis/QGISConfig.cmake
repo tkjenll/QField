@@ -21,11 +21,18 @@ if (CMAKE_HOST_WIN32)
 else ()
   set_library_target("QGIS" "CORE" "${ROOT}/debug/lib/libqgis_core.a" "${ROOT}/lib/libqgis_core.a" "${ROOT}/include/qgis/")
   set_library_target("QGIS" "ANALYSIS" "${ROOT}/debug/lib/libqgis_analysis.a" "${ROOT}/lib/libqgis_analysis.a" "${ROOT}/include/qgis/")
+  wmsprovider
+
 endif ()
 set(QGIS_INCLUDE_DIR "${ROOT}/include/qgis/")
 # This should be done by the set_library_target function, but doesnt work for whatever reason ...
 set(QGIS_CORE_LIBRARY QGIS::CORE)
 set(QGIS_ANALYSIS_LIBRARY QGIS::ANALYSIS)
 find_package(GDAL REQUIRED)
-target_link_libraries(QGIS::CORE INTERFACE GDAL::GDAL CONFIG)
+target_link_libraries(QGIS::CORE INTERFACE GDAL::GDAL)
+find_package(Protobuf REQUIRED)
+target_link_libraries(QGIS::CORE INTERFACE protobuf::libprotobuf)
+find_package(Spatialindex REQUIRED)
+target_link_libraries(QGIS::CORE INTERFACE ${Spatialindex_LIBRARY})
+
 target_link_libraries(QGIS::ANALYSIS INTERFACE QGIS::CORE)
