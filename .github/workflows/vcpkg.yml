@@ -185,6 +185,7 @@ jobs:
           SOURCE_DIR=$( ${{ matrix.pathconvert }} "${WORKSPACE}" )
 
           rm cmake/FindQGIS.cmake
+          rm cmake/FindQCA.cmake
           overlay_ports=(${WORKSPACE}/${{ matrix.overlay }} ${WORKSPACE}/vcpkg/overlay)
           echo "Building with $(IFS=\; ; echo "${overlay_ports[*]}")"
           cmake -S "${SOURCE_DIR}" \
