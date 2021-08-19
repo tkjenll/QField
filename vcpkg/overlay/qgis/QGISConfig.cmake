@@ -48,8 +48,13 @@ find_package(Protobuf REQUIRED)
 target_link_libraries(QGIS::CORE INTERFACE protobuf::libprotobuf)
 find_package(exiv2 REQUIRED)
 target_link_libraries(QGIS::CORE INTERFACE exiv2lib)
-find_package(Qca REQUIRED)
-target_link_libraries(QGIS::CORE INTERFACE qca)
+
+# Qca does not support manifest mode? The QcaTargets.cmake file will look for
+# the lib in the vcpkg install folder and not the manifest install folder
+#find_package(Qca REQUIRED)
+#target_link_libraries(QGIS::CORE INTERFACE qca)
+
+find_and_link_library(QGIS::CORE qca)
 find_and_link_library(QGIS::CORE spatialite)
 find_and_link_library(QGIS::CORE spatialindex)
 find_and_link_library(QGIS::CORE tasn1)
