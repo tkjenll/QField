@@ -91,7 +91,7 @@ def app(process, process_communicate):
         try:
             exit_code = process.poll()
             if exit_code is not None:
-                process_communicate(process)
+                process_communicate()
                 assert exit_code is None
             app.existsAndVisible("mainWindow")
             yield app
