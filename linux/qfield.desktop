@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=QField
+Type=Application
+Terminal=false
+NoDisplay=false
+Exec=qfield
+Icon=qfield
+X-AppImage-Integrate=false
+Categories=Utility
