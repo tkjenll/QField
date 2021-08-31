@@ -114,8 +114,10 @@ macro(FIND_LIB_OPTIONS basename relname debname suffix libsuffix)
 endmacro()
 
 
-list(APPEND QGIS_OPTIONS -DFORCE_STATIC_LIBS=TRUE)
-list(APPEND QGIS_OPTIONS -DFORCE_STATIC_PROVIDERS=TRUE)
+if (VCPKG_LIBRARY_LINKAGE STREQUAL static)
+    list(APPEND QGIS_OPTIONS -DFORCE_STATIC_LIBS=TRUE)
+    list(APPEND QGIS_OPTIONS -DFORCE_STATIC_PROVIDERS=TRUE)
+endif()
 
 if(VCPKG_TARGET_IS_WINDOWS)
     ##############################################################################

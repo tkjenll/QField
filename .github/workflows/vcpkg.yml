@@ -185,6 +185,7 @@ jobs:
 
       - name: 📑 Upload Build Logs
         uses: actions/upload-artifact@v2
+        if: failure()
         with:
           name: build-logs-${{ matrix.triplet }}
           path: ${{ steps.vars.outputs.VCPKG_ROOT }}/buildtrees/**/*.log
