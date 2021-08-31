@@ -217,9 +217,15 @@ jobs:
           cd "${{ env.CMAKE_BUILD_DIR }}"
           ${TESTWRAPPER} ctest --output-on-failure -E '${{ steps.vars.outputs.EXCLUDE_TESTS }}' -C ${{ steps.vars.outputs.BUILD_TYPE }}
 
+      - name: Install LinuxDeploy
+        uses: miurahr/install-linuxdeploy-action@v1
+        with:
+          plugins: qt appimage
+
       - name: Package
         run: |
-          ./scripts/ci/create-appimage.sh "${{ env.CMAKE_BUILD_DIR }}/output"
+          linuxdeploy-x86_64.AppImage --plugin=qt --output=qfield-dev --create-desktop-file --executable=qfield --appdir appdir --icon-file=qfield.svg
+
 
       - name: 📦 Upload package
         uses: actions/upload-artifact@v2
