@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - static
       - release-**
   pull_request:
   release:
