@@ -1,0 +1,2301 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Vector Layer Settings - QField Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#style" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="QField Documentation" class="md-header__button md-logo" aria-label="QField Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/qfield_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QField Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vector Layer Settings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 17.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zm0 1.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm12-7a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 24 12zM4 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 4 12zm16.485-8.485a.75.75 0 0 1 0 1.06l-1.768 1.768a.75.75 0 0 1-1.06-1.06l1.767-1.768a.75.75 0 0 1 1.061 0zM6.343 17.657a.75.75 0 0 1 0 1.06l-1.768 1.768a.75.75 0 1 1-1.06-1.06l1.767-1.768a.75.75 0 0 1 1.061 0zM12 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 12 0zm0 20a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5A.75.75 0 0 1 12 20zM3.515 3.515a.75.75 0 0 1 1.06 0l1.768 1.768a.75.75 0 1 1-1.06 1.06L3.515 4.575a.75.75 0 0 1 0-1.06zm14.142 14.142a.75.75 0 0 1 1.06 0l1.768 1.768a.75.75 0 0 1-1.06 1.06l-1.768-1.767a.75.75 0 0 1 0-1.061z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16.5 6c0 5.799-4.701 10.5-10.5 10.5-.426 0-.847-.026-1.26-.075A8.5 8.5 0 1 0 16.425 4.74c.05.413.075.833.075 1.259zm-1.732-2.04A9.08 9.08 0 0 1 14.999 6a9 9 0 0 1-11.04 8.768l-.004-.002a9.367 9.367 0 0 1-.78-.218c-.393-.13-.8.21-.67.602a9.938 9.938 0 0 0 .329.855l.004.01A10.002 10.002 0 0 0 12 22a10.002 10.002 0 0 0 4.015-19.16l-.01-.005a9.745 9.745 0 0 0-.855-.328c-.392-.13-.732.276-.602.67a8.934 8.934 0 0 1 .218.779l.002.005z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/en/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/de/" hreflang="de" class="md-select__link">
+                    Deutsch
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/ja/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+        De
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../en/" class="md-tabs__link">
+        En
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="QField Documentation" class="md-nav__button md-logo" aria-label="QField Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/qfield_logo.svg" alt="logo">
+
+    </a>
+    QField Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        De
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="De" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          De
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      <label class="md-nav__link" for="__nav_1_2">
+        Case studies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Case studies" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Case studies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/ecological-surveying/" class="md-nav__link">
+        Improving Efficiencies in Ecological Surveying using QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/geologic-mapping/" class="md-nav__link">
+        Geologic Mapping with QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/lulc-mapping-fiji/" class="md-nav__link">
+        Ground Truth Data Collection Using QField for LULC Mapping in Fiji
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/mapping-breeding-birds-in-the-Wadden-Sea/" class="md-nav__link">
+        Use of QField for mapping breeding birds in the Wadden Sea
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/mosquito-malario-ground-truth-data-collection/" class="md-nav__link">
+        Use of Qfield in the context of ground-truth data collection work of malaria transmitting mosquitoes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/river-state-survey/" class="md-nav__link">
+        River State Survey Using QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/rwanda-rural-water/" class="md-nav__link">
+        Data collection by QGIS/QField for O&M work of rural water supply systems in Rwanda
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../case-studies/vanilla-survey/" class="md-nav__link">
+        Vanilla Surveys using QField
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
+      
+      <label class="md-nav__link" for="__nav_1_3">
+        Fieldwork
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Fieldwork" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fieldwork
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/digitize/" class="md-nav__link">
+        Digitize
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/gps/" class="md-nav__link">
+        GNSS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/map-interaction/" class="md-nav__link">
+        Interact with the map
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/map-themes/" class="md-nav__link">
+        Change map themes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/print-to-pdf/" class="md-nav__link">
+        Print to PDF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/projects/" class="md-nav__link">
+        Open a project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/search/" class="md-nav__link">
+        Search
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/track_lines_polygons/" class="md-nav__link">
+        Track lines and polygons
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fieldwork/variables/" class="md-nav__link">
+        Global variables
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+      
+      <label class="md-nav__link" for="__nav_1_4">
+        Old doc
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Old doc" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Old doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_1" type="checkbox" id="__nav_1_4_1" >
+      
+      <label class="md-nav__link" for="__nav_1_4_1">
+        Case studies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Case studies" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Case studies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/ecological-surveying/" class="md-nav__link">
+        Improving Efficiencies in Ecological Surveying using QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/mapping-breeding-birds-in-the-Wadden-Sea/" class="md-nav__link">
+        Use of QField for mapping breeding birds in the Wadden Sea
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/mosquito-malario-ground-truth-data-collection/" class="md-nav__link">
+        Use of Qfield in the context of ground-truth data collection work of malaria transmitting mosquitoes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case-studies/river-state-survey/" class="md-nav__link">
+        River State Survey Using QField
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_2" type="checkbox" id="__nav_1_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_1_4_2">
+        Project management
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Project management" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Project management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-1-n-pictures/" class="md-nav__link">
+        Add a series of pictures to a feature
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../allow-hiding-legend-nodes/" class="md-nav__link">
+        Allow hiding legend nodes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-data-structure/" class="md-nav__link">
+        Custom SVG symbols and settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure-search/" class="md-nav__link">
+        Search in layers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataformat/" class="md-nav__link">
+        Dataformat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-themes/" class="md-nav__link">
+        Configure Map Themes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portable-project/" class="md-nav__link">
+        Portable Project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print-to-pdf/" class="md-nav__link">
+        Print to PDF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-selection/" class="md-nav__link">
+        Project selection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Vector Layer Settings
+      </a>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_3" type="checkbox" id="__nav_1_4_3" >
+      
+      <label class="md-nav__link" for="__nav_1_4_3">
+        User guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User guide" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/map-themes/" class="md-nav__link">
+        Change the active Map Theme
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/track_lines_polygons/" class="md-nav__link">
+        Tracking of lines and polygons
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/variables/" class="md-nav__link">
+        Global variables
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      <label class="md-nav__link" for="__nav_1_5">
+        Prepare
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Prepare" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Prepare
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/add-1-n-pictures/" class="md-nav__link">
+        Add a series of pictures to a feature
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/allow-hiding-legend-nodes/" class="md-nav__link">
+        Allow hiding legend nodes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/attributes-form/" class="md-nav__link">
+        Attribute Form Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/custom-svg/" class="md-nav__link">
+        Custom SVG symbols
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/display-expression/" class="md-nav__link">
+        Display expression
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/gnss/" class="md-nav__link">
+        GNSS and precision measurement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/map-styling-configuration/" class="md-nav__link">
+        Map styling and configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/map-themes/" class="md-nav__link">
+        Map themes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prepare/picture_path/" class="md-nav__link">
+        Configurable picture path
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" >
+      
+      <label class="md-nav__link" for="__nav_1_6">
+        Synchronise
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Synchronise" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Synchronise
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../synchronise/basemaps/" class="md-nav__link">
+        Base maps and Imagery
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../synchronise/movable-project/" class="md-nav__link">
+        Movable project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../synchronise/qfieldcloud/" class="md-nav__link">
+        QFieldCloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../synchronise/qfieldsync/" class="md-nav__link">
+        QFieldSync plugin
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        En
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="En" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          En
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Case studies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Case studies" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Case studies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/ecological-surveying/" class="md-nav__link">
+        Improving Efficiencies in Ecological Surveying using QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/geologic-mapping/" class="md-nav__link">
+        Geologic Mapping with QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/lulc-mapping-fiji/" class="md-nav__link">
+        Ground Truth Data Collection Using QField for LULC Mapping in Fiji
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/mapping-breeding-birds-in-the-Wadden-Sea/" class="md-nav__link">
+        Use of QField for mapping breeding birds in the Wadden Sea
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/mosquito-malario-ground-truth-data-collection/" class="md-nav__link">
+        Use of Qfield in the context of ground-truth data collection work of malaria transmitting mosquitoes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/river-state-survey/" class="md-nav__link">
+        River State Survey Using QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/rwanda-rural-water/" class="md-nav__link">
+        Data collection by QGIS/QField for O&M work of rural water supply systems in Rwanda
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/case-studies/vanilla-survey/" class="md-nav__link">
+        Vanilla Surveys using QField
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Fieldwork
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Fieldwork" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fieldwork
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/digitize/" class="md-nav__link">
+        Digitize
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/gps/" class="md-nav__link">
+        GNSS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/map-interaction/" class="md-nav__link">
+        Interact with the map
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/map-themes/" class="md-nav__link">
+        Change map themes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/print-to-pdf/" class="md-nav__link">
+        Print to PDF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/projects/" class="md-nav__link">
+        Open a project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/search/" class="md-nav__link">
+        Search
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/track_lines_polygons/" class="md-nav__link">
+        Track lines and polygons
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/fieldwork/variables/" class="md-nav__link">
+        Global variables
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_4">
+        Old doc
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Old doc" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Old doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_1" type="checkbox" id="__nav_2_4_1" >
+      
+      <label class="md-nav__link" for="__nav_2_4_1">
+        Case studies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Case studies" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Case studies
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/case-studies/ecological-surveying/" class="md-nav__link">
+        Improving Efficiencies in Ecological Surveying using QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/case-studies/mapping-breeding-birds-in-the-Wadden-Sea/" class="md-nav__link">
+        Use of QField for mapping breeding birds in the Wadden Sea
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/case-studies/mosquito-malario-ground-truth-data-collection/" class="md-nav__link">
+        Use of Qfield in the context of ground-truth data collection work of malaria transmitting mosquitoes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/case-studies/river-state-survey/" class="md-nav__link">
+        River State Survey Using QField
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_2" type="checkbox" id="__nav_2_4_2" >
+      
+      <label class="md-nav__link" for="__nav_2_4_2">
+        Project management
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Project management" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Project management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/add-1-n-pictures/" class="md-nav__link">
+        Add a series of pictures to a feature
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/allow-hiding-legend-nodes/" class="md-nav__link">
+        Allow hiding legend nodes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/android-data-structure/" class="md-nav__link">
+        Custom SVG symbols and settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/configure-search/" class="md-nav__link">
+        Search in layers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/dataformat/" class="md-nav__link">
+        Dataformat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/map-themes/" class="md-nav__link">
+        Configure Map Themes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/portable-project/" class="md-nav__link">
+        Portable Project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/print-to-pdf/" class="md-nav__link">
+        Print to PDF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/project-selection/" class="md-nav__link">
+        Project selection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/project-management/vector-layers/" class="md-nav__link">
+        Vector Layer Settings
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" type="checkbox" id="__nav_2_4_3" >
+      
+      <label class="md-nav__link" for="__nav_2_4_3">
+        User guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User guide" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          User guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/user-guide/map-themes/" class="md-nav__link">
+        Change the active Map Theme
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/user-guide/track_lines_polygons/" class="md-nav__link">
+        Tracking of lines and polygons
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/old-doc/user-guide/variables/" class="md-nav__link">
+        Global variables
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        Prepare
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Prepare" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Prepare
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/add-1-n-pictures/" class="md-nav__link">
+        Add a series of pictures to a feature
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/advanced/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/allow-hiding-legend-nodes/" class="md-nav__link">
+        Allow hiding legend nodes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/attributes-form/" class="md-nav__link">
+        Attribute Form Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/custom-svg/" class="md-nav__link">
+        Custom SVG symbols
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/display-expression/" class="md-nav__link">
+        Display expression
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/gnss/" class="md-nav__link">
+        GNSS and precision measurement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/map-styling-configuration/" class="md-nav__link">
+        Map styling and configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/map-themes/" class="md-nav__link">
+        Map themes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/prepare/picture_path/" class="md-nav__link">
+        Configurable picture path
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      <label class="md-nav__link" for="__nav_2_6">
+        Synchronise
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Synchronise" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Synchronise
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/synchronise/basemaps/" class="md-nav__link">
+        Base maps and Imagery
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/synchronise/movable-project/" class="md-nav__link">
+        Movable project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/synchronise/qfieldcloud/" class="md-nav__link">
+        QFieldCloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/synchronise/qfieldsync/" class="md-nav__link">
+        QFieldSync plugin
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p>Most of the settings which QGIS offers are directly supported by QField
+without any extra effort.</p>
+<h1 id="style">Style</h1>
+<p>All style settings from QGIS are directly supported by QField. This
+includes all renderer types like graduated, categorized, rule based,
+2.5D as well as data defined symbology.</p>
+<h1 id="display-expression">Display Expression</h1>
+<p>In QField, objects are identified with a name. The expression to
+generate this name can be defined by opening the attribute table in QGIS
+and switching to the form view. Choose the appropriate field or an
+expression in the list there. Starting from QGIS 3, this can be done
+directly from the
+<code>Vector Layer Properties --&gt; Display</code>{.interpreted-text
+role="menuselection"} page.</p>
+<p>The display expression is also used to search in layers.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="The display expression will be used to represent features with an
+identification string throughout
+QField." src="/images/define_display_expression.png" />{width="500px"}
+:::</p>
+<h1 id="read-only-non-identifiable-and-searchable-layers">Read only, non-identifiable and searchable layers</h1>
+<p>Some layers in a project are just there for pure visual purpose. Such
+layers should not show up when a user taps somewhere to identify
+objects.</p>
+<p>Some other layers serve as source of information and shouldn\'t be
+modified by the user. It is possible to protect layers from editing
+attributes or adding and deleting features.</p>
+<p>It is also possible to configure which layers are searchable.</p>
+<p>To configure identify, readonly and searchable behavior, go to the
+<code>Project --&gt; Project Properties --&gt; Identify Layers</code>{.interpreted-text
+role="menuselection"} page and activate the checkboxes to match your
+desired behavior.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="Configuration of layers that will not be identifiable, not modifiable
+and/or not
+searchable." src="/images/project_configuration_readonly.png" />{width="500px"}
+:::</p>
+<h1 id="forms-and-fields">Forms and Fields</h1>
+<p>QField creates forms similar to, but not equal to QGIS.</p>
+<h2 id="suppress-feature-form">Suppress Feature Form</h2>
+<p>The setting suppress feature form is directly applied to the QField
+form.</p>
+<h2 id="field-widget-old_edit_field_widgets">Field widget {#old_edit_field_widgets}</h2>
+<p>The field widgets from QGIS are supported on a best effort basis.</p>
+<p>+---------------+-------------+---------------------------------------+
+| Field type    | Support     | Notes                                 |
++===============+=============+=======================================+
+| Text Edit     | [✔]{.yay}   | -   HTML is not supported             |
+|               |             | -   Numerical input is enforced based |
+|               |             |     on the type.                      |
++---------------+-------------+---------------------------------------+
+| Check Box     | [✔]{.yay}   |                                       |
++---------------+-------------+---------------------------------------+
+| Value Map     | [✔]{.yay}   |                                       |
++---------------+-------------+---------------------------------------+
+| Hidden        | [✔]{.yay}   |                                       |
++---------------+-------------+---------------------------------------+
+| External      | [\~]{.      | This field is combined with camera    |
+| Resource      | moreorless} | integration. Only images can be       |
+|               |             | viewed so far.                        |
+|               |             | <code>old_make_it_grow</code>{.interpreted-text  |
+|               |             | role="ref"}                           |
++---------------+-------------+---------------------------------------+
+| Date Time     | [✔]{.yay}   |                                       |
++---------------+-------------+---------------------------------------+
+| Relation      | [✔]{.yay}   |                                       |
+| Reference     |             |                                       |
++---------------+-------------+---------------------------------------+
+| Relation      | [✔]{.yay}   |                                       |
+| Widget        |             |                                       |
++---------------+-------------+---------------------------------------+
+| Others        | [✘]{.nay}   | <code>old_make_it_grow</code>{.interpreted-text  |
+|               |             | role="ref"}                           |
++---------------+-------------+---------------------------------------+</p>
+<h3 id="relation-widget">Relation Widget</h3>
+<p>For more information refer to the relations chapter of the official
+<a href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/attribute_table.html#creating-one-or-many-to-many-relations">QGIS
+Documentation</a>.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="" src="/images/relation_editor_widget_list.png" />{width="500px"}
+:::</p>
+<p>The relation widget shows all the referencing child features in a list.
+It\'s possible to add, delete and open them.</p>
+<p>The visual identification of the list entries are done a Display
+Expression on the child layer.</p>
+<p><strong>Key handling</strong></p>
+<p>Since the parents primary keys are used as foreign keys on the
+referencing child features, these primary keys must be save to use even
+after the synchronization back to the original data. Therefore we
+recommend to use stable values such as UUIDs for primary keys.</p>
+<p>Child features can be added before the parent is finaly saved - means
+while adding a parent. But it\'s blocked if there is no valid primary
+key on the parent or the constraints are violated. In case the adding of
+the parent feature is canceled after there have been some childs added
+already, the childs are deleted by cascade.</p>
+<p><strong>Many-To-Many relations</strong></p>
+<p>On many-to-many relationships, according to the cardinality setting in
+the QGIS Vector Layer Properties, on adding, deleting or opening an
+entry in the list effects directly the child layer (on direct
+cardinality) or the linking table (on many-to-one cardinality).</p>
+<p>The second case is usually used when there are additional relation
+information (e.g. percentage) in the linking table.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="" src="/images/relation_widget_cardinality.png" />{width="500px"}
+:::</p>
+<p>In case of the many-to-one cardinality on many-to-many relations the
+Display Expression needs to be set on the linking table.</p>
+<h3 id="external-resource-photo-settings">External Resource (photo settings)</h3>
+<p>The widget type \"Attachement\" is used to store the path to collected
+photos.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="" src="/images/attachement-setting.png" />{width="600px"}
+:::</p>
+<p>The path should be set to relative. Means the pictures are stored then
+in a sub-directory of the project, where the link stored in the
+textfield is pointing to.</p>
+<p>In QField the picture is displayed. By clicking the camera symbol the
+camera is started to update the picture with a new photo.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="" src="/images/qfield_picture.png" />{width="600px"}
+:::</p>
+<p>On synchronization the sub-directory with the pictures has to be copied
+as well.</p>
+<h2 id="drag-and-drop-designer-forms">Drag and drop designer forms</h2>
+<p>Groups and Tabs from Drag and Drop designer forms are supported.</p>
+<h2 id="conditional-visibility">Conditional visibility</h2>
+<p>Groups can be hidden based on an expression. This is useful when certain
+attributes are only required under certain conditions. As an example
+imagine mapping trees. Some of them might have a disease and you have a
+list of possible deseases. To not clutter the form with many fields,
+make a group and configure a visibility expression for a group
+\"diseases\". Add a field \"desease\" with a checkbox. Only when the
+checkbox is checked, the list of diseases will be available to the user.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="Configuration of a group box that will only be shown if the checkbox
+\&quot;measures_taken\&quot; is
+checked." src="/images/conditional_visibility_configuration.png" />{width="600px"}
+:::</p>
+<h2 id="constraints">Constraints</h2>
+<p>Attribute fields can have constraints attached. Constraints are
+expressions that needs to evaluate to <code>True</code> (or <code>1</code>) in order to be
+able to save the form. Constraints are configured on a per-field basis
+and a description can be added that will be shown to the user if a
+constraint is not satisfied.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="Configuration of a constraint within a
+range" src="/images/constraint_configuration.png" />{width="600px"}
+:::</p>
+<h3 id="common-use-cases">Common use cases</h3>
+<p>You cannot enter an elevation value higher than the highest mountain in
+this country.</p>
+<pre><code class="language-sql">&quot;elevation&quot; &lt; 5000
+</code></pre>
+<p>It is required to fill in an identifier.</p>
+<pre><code class="language-sql">&quot;identifier&quot; IS NOT NULL
+</code></pre>
+<h2 id="default-values">Default values</h2>
+<p>Fields can have default values configured. Default values are inserted
+into the attribute form when digitizing a new feature. They are visible
+to the user and can be modified as long as the field is editable. They
+can be based on the geometry or expression variables.</p>
+<p>::: {.container .clearer .text-center}
+<img alt="Configuration of a formatted date as default
+value" src="/images/default_value_configuration.png" />{width="600px"}
+:::</p>
+<h3 id="additional-variables">Additional variables</h3>
+<p>In QField, there are some additional variables available regarding the
+current positioning information.</p>
+<ul>
+<li>[position_coordinate]{.title-ref} (Geometry in WGS84!) : Lon, Lat,
+    Altitude as delivered by the sensor. Is also available when the
+    crosshair is not snapped to the sensor.</li>
+<li>[position_timestamp]{.title-ref} (DateTime) : Timestamp of the
+    position information</li>
+<li>[position_direction]{.title-ref} (float) : Direction in degrees
+    from true north.</li>
+<li>[position_ground_speed]{.title-ref} (float) : Groundspeed in
+    meters / second.</li>
+<li>[position_magnetic_variation]{.title-ref} (float) : The angle
+    between the horizontal component of the magnetic field and true
+    north, in degrees. Also known as magnetic declination. A positive
+    value indicates a clockwise direction from true north and a negative
+    value indicates a counter-clockwise direction.</li>
+<li>[position_horizontal_accuracy]{.title-ref} (float) : The
+    horizontal accuracy of the coordinate (in meters).</li>
+<li>[position_vertical_accuracy]{.title-ref} (float) : The vertical
+    accuracy of the coordinate (in meters).</li>
+<li>[position_vertical_speed]{.title-ref} (float) : The value of the
+    vertical speed in meters per second.</li>
+</ul>
+<h3 id="common-use-cases_1">Common use cases</h3>
+<p>Insert positioning information as variable:</p>
+<pre><code class="language-sql">@position_horizontal_accuracy
+</code></pre>
+<p>Insert the current date and time:</p>
+<pre><code class="language-sql">now()
+</code></pre>
+<p>Insert the length of the digitized line:</p>
+<pre><code class="language-sql">length($geometry)
+</code></pre>
+<p>Configure global variables on the device and insert them.</p>
+<pre><code class="language-sql">@operator_name
+</code></pre>
+<p>If you want to assign a region code based on the location where a new
+feature is inserted, you can do so by using an aggregate expression:</p>
+<pre><code class="language-sql">aggregate( layer:='regions', aggregate:='max', expression:=&quot;code&quot;, filter:=intersects( $geometry, geometry( @parent ) ) )
+</code></pre>
+<h2 id="editable">Editable</h2>
+<p>The editable flag of fields is respected.</p>
+<h2 id="remember-last-values">Remember last values</h2>
+<p>QField offers a much more fine-grained control over the last used values
+and ignores the QGIS setting.</p>
+<h1 id="snapping">Snapping</h1>
+<p>While digitizing new features, new points can be snapped to existing
+geometries.</p>
+<p>All configuration can be done in
+<code>Project --&gt; Snapping Settings</code>{.interpreted-text role="menuselection"}
+(<code>Settings --&gt; Snapping Settings</code>{.interpreted-text
+role="menuselection"} in QGIS 2.x).</p>
+<h2 id="snapping-types">Snapping Types</h2>
+<p>It is possible to snap new points</p>
+<ul>
+<li>only to nodes of existing geomtries</li>
+<li>only to segments of existing geomtries</li>
+<li>to nodes and segments of existing geomtries</li>
+</ul>
+<h2 id="snapping-to-layers">Snapping to layers</h2>
+<p>It is also possible to only snap to one or a few layers.</p>
+<h2 id="snapping-tolerance">Snapping tolerance</h2>
+<p>The snapping tolerance can be specified in map units or pixels.</p>
+<p>In almost any case, the units should be set to pixels. We made good
+experiences with a tolerance value of 20.</p>
+<h1 id="3d-coordinates">3D Coordinates</h1>
+<p>GPS devices are capable of measuring the altitude next to the current 2D
+position on the earth surface. This information can be saved</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../project-selection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Project selection" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Project selection
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../user-guide/map-themes/" class="md-footer__link md-footer__link--next" aria-label="Next: Change the active Map Theme" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Change the active Map Theme
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>
