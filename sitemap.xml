@@ -1,572 +1,572 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/ecological-surveying/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/geologic-mapping/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/lulc-mapping-fiji/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/mapping-breeding-birds-in-the-Wadden-Sea/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/mosquito-malario-ground-truth-data-collection/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/river-state-survey/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/rwanda-rural-water/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/case-studies/vanilla-survey/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/data-formats/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/digitize/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/gps/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/map-interaction/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/print-to-pdf/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/projects/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/search/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/track_lines_polygons/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/fieldwork/variables/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/getting-started/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/install/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/case-studies/ecological-surveying/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/case-studies/mapping-breeding-birds-in-the-Wadden-Sea/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/case-studies/mosquito-malario-ground-truth-data-collection/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/case-studies/river-state-survey/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/concepts/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/development/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/installation-guide/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/add-1-n-pictures/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/allow-hiding-legend-nodes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/android-data-structure/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/configure-search/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/dataformat/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/portable-project/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/print-to-pdf/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/project-selection/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/project-management/vector-layers/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/qfieldsync/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/user-guide/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/user-guide/track_lines_polygons/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/old-doc/user-guide/variables/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/add-1-n-pictures/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/advanced/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/allow-hiding-legend-nodes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/attributes-form/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/custom-svg/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/display-expression/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/gnss/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/map-styling-configuration/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/prepare/picture_path/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/support/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/synchronise/basemaps/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/synchronise/movable-project/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/synchronise/qfieldcloud/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/de/synchronise/qfieldsync/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/ecological-surveying/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/geologic-mapping/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/lulc-mapping-fiji/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/mapping-breeding-birds-in-the-Wadden-Sea/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/mosquito-malario-ground-truth-data-collection/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/river-state-survey/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/rwanda-rural-water/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/case-studies/vanilla-survey/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/data-formats/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/digitize/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/gps/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/map-interaction/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/print-to-pdf/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/projects/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/search/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/track_lines_polygons/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/fieldwork/variables/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/getting-started/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/install/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/case-studies/ecological-surveying/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/case-studies/mapping-breeding-birds-in-the-Wadden-Sea/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/case-studies/mosquito-malario-ground-truth-data-collection/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/case-studies/river-state-survey/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/concepts/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/development/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/installation-guide/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/add-1-n-pictures/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/allow-hiding-legend-nodes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/android-data-structure/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/configure-search/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/dataformat/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/portable-project/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/print-to-pdf/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/project-selection/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/project-management/vector-layers/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/qfieldsync/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/user-guide/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/user-guide/track_lines_polygons/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/old-doc/user-guide/variables/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/add-1-n-pictures/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/advanced/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/allow-hiding-legend-nodes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/attributes-form/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/custom-svg/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/display-expression/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/gnss/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/map-styling-configuration/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/map-themes/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/prepare/picture_path/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/support/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/synchronise/basemaps/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/synchronise/movable-project/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/synchronise/qfieldcloud/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://qfield.org/en/synchronise/qfieldsync/</loc>
          <lastmod>2021-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
