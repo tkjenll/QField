@@ -691,6 +691,10 @@ bool QFieldCloudProjectsModel::projectMoveDownloadedFilesToPermanentStorage( con
 
     const QString destinationFileName( dir.filePath( fileInfo.fileName() ) );
 
+    qDebug() << "fileName" << file.fileName();
+    qDebug() << "destinationFileName" << destinationFileName;
+    qDebug() << "destinationFileExists" << QFile::exists( destinationFileName );
+
     // if the file already exists, we need to delete it first, as QT does not support overwriting
     // NOTE: it is possible that someone creates the file in the meantime between this and the next if statement
     if ( !hasError && QFile::exists( destinationFileName ) && !file.remove( destinationFileName ) )
