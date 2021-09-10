@@ -43,8 +43,7 @@ jobs:
         shell: bash
         run: |
           case ${{ matrix.triplet }} in
-            x64-windows)
-            x86-windows)
+            x64-windows | x86-windows)
               BUILD_ROOT="C:"
               echo "::set-output name=MONO::"
               echo "::set-output name=PATHCONVERT::cygpath -u"
