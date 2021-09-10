@@ -161,6 +161,13 @@ jobs:
           # Required to run unit tests on linux
           echo "QT_QPA_PLATFORM=offscreen" >> $GITHUB_ENV
           echo "TESTWRAPPER=xvfb-run" >> $GITHUB_ENV
+          
+      - name: Prepare windows build env
+        if: ${{ matrix.triplet == 'x86-windows' }}
+        shell: bash
+        run: |
+          echo "EXTRA_CMAKE_ARGS=-A Win32" >> $GITHUB_ENV
+
 
       - name: 🌱 Install dependencies and generate project files
         shell: bash
