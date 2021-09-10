@@ -3,7 +3,7 @@ name: 🎁 Package with vcpkg
 on:
   push:
     branches:
-      - master
+      - win32
       - release-**
   pull_request:
   release:
@@ -18,6 +18,9 @@ jobs:
       matrix:
         include:
           - triplet: 'x64-windows'
+            os: 'windows-2019'
+
+          - triplet: 'x86-windows'
             os: 'windows-2019'
 
           - triplet: 'x64-linux'
